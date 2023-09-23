@@ -1,17 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { useEffect, useState } from 'react';
+import ReactDOM from 'react-dom';
+import '../src/styles/App.css'; 
+import App from './components/App';
+import AppContext from './context';
+import {in_progress, no_priority, low, medium, high, urgent, fade_circle, dashed_circle, void_circle, done} from '../src/assets/index';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <Outer/>   
+  </React.StrictMode>,
+  document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function Outer () {
+  const app = {
+    priorityIcon: [no_priority, low, medium, high, urgent],
+    statusIcon: {
+      "In progress": in_progress,
+      "Todo": void_circle,
+      "Done": done,
+      "Backlog": dashed_circle,
+    },
+    groupingOptions: ["user", "priority", "status"],
+    orderingOptions: ["priority", "user"],
+  }
+  return(
+  <AppContext.Provider value={app}>
+      <App />
+  </AppContext.Provider>  
+  )
+}
