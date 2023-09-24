@@ -32,6 +32,7 @@ function FilterDropdown({
           ))}
         </select>
       </label>
+      <br></br>
       <label>Ordering: 
         <select value={selectedOrdering} onChange={handleOrderingChange}>
           {orderingOptions.map((option) => (

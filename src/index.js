@@ -13,6 +13,7 @@ ReactDOM.render(
 );
 function Outer () {
   const app = {
+    priorityType: ["No priority", "Low", "Medium", "High", "Urgent"],
     priorityIcon: [no_priority, low, medium, high, urgent],
     statusIcon: {
       "In progress": in_progress,
@@ -21,7 +22,7 @@ function Outer () {
       "Backlog": dashed_circle,
     },
     groupingOptions: ["user", "priority", "status"],
-    orderingOptions: ["priority", "user"],
+    orderingOptions: ["priority", "title"],
   }
   return(
   <AppContext.Provider value={app}>

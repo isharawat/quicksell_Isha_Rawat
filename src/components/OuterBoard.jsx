@@ -12,7 +12,6 @@ function OuterBoard({users, userInfo, data, selectedGrouping}) {
         tickets={data[key]}
         userInfo = {userInfo}
         users={users}
-        className = "Single_column"
         selectedGrouping = {selectedGrouping}
       />))
       }

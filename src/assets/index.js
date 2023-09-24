@@ -14,8 +14,9 @@ import no_priority from "./three_dash.svg";
 import Vector1 from './Vector-1.svg';
 import Vector from './Vector.svg';
 import void_circle from './void_circle.svg';
-
+import arrow_down from './arrow-down-3101.svg'
 export {
+    arrow_down,
     cancel,
     dashed_circle,
     done,
