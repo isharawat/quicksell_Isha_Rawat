@@ -3,7 +3,6 @@
   width: 200px;
   margin: 5px 0;
   border-radius: 4px;
-  background-color: rgb(245, 243, 243);
   padding: 13px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   display: flex;
@@ -13,6 +12,7 @@
 .check-button {
   text-align: start;
 }
+
 /* Top row: User ID and Circular User Profile */
 .top-row {
   display: flex;
@@ -43,15 +43,14 @@
 }
 
 .online-dot {
-  position: absolute; /* Position the dot absolutely within the container */
-  width: 7px; /* Adjust the size of the dot as needed */
+  position: absolute; 
+  width: 7px; 
   height: 7px;
-  border-radius: 50%; /* Makes the dot round */
+  border-radius: 50%; 
   top: 12px;
-  border: 1px solid rgb(211, 208, 208);
-  left: 11px;/* Adjust the vertical position */
-  /* Adjust the horizontal position */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a shadow for better visibility */
+  border: 1px solid rgb(217, 214, 214);
+  left: 11px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
 }
 
 /* Title */
@@ -75,13 +74,25 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-}
-
-.feature {
   box-shadow: 0 0 5px rgba(121, 118, 118, 0.3);
 }
-.feature-request-button button:hover {
-  background-color: #0056b3;
+
+.feature-request-left-icon {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-right: 10px;
+  display: flex;
+  justify-items: center;
+  border-radius: 3px;
+  padding: 3px;
+  box-shadow: 0 0 5px rgba(121, 118, 118, 0.3);
 }
 
-/* Add more styles as needed */
+.inlineblock {
+  display: inline-block;
+}
+.marginright{
+  margin-right: 6px;
+
+}

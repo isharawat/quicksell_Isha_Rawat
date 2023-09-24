@@ -1,6 +1,6 @@
 import React from 'react';
-import SingleColumn from './SingleColumn';
-import '../styles/OuterBoard.css'; // Import custom styles for the Single board
+import SingleColumn from '../SingleColumn/SingleColumn';
+import './OuterBoard.css'; // Import custom styles for the Single board
 
 function OuterBoard({userInfo, data, selectedGrouping}) {
   return (

@@ -1,12 +1,8 @@
 // FilterDropdown.js
-import React, { useContext, useEffect, useState } from 'react';
-import AppContext from '../context';
-function FilterDropdown({
-  selectedGrouping,
-  setSelectedGrouping,
-  selectedOrdering,
-  setSelectedOrdering,
-}) {
+import React, { useContext } from 'react';
+import AppContext from '../../context';
+import './FilterDropdown.css'
+function FilterDropdown({selectedGrouping, setSelectedGrouping, selectedOrdering, setSelectedOrdering}) {
 
   const values = useContext(AppContext);
   const groupingOptions = values.groupingOptions;
@@ -23,27 +19,29 @@ function FilterDropdown({
   return (
     
     <div className="filter-dropdown">
-      <label>Grouping: 
-        <select value={selectedGrouping} onChange={handleGroupingChange}>
+      <div className='filter-dropdown-div'>
+        <div className='filter-display-text'>Grouping</div> 
+        <select className = "filter-select" value={selectedGrouping} onChange={handleGroupingChange}>
           {groupingOptions.map((option) => (
             <option key={option} value={option}>
               {option}
             </option>
           ))}
         </select>
-      </label>
-      <br></br>
-      <label>Ordering: 
-        <select value={selectedOrdering} onChange={handleOrderingChange}>
+      </div>
+      <div className='filter-dropdown-div'>
+        <div className='filter-display-text'>Ordering</div>
+        <select className = "filter-select" value={selectedOrdering} onChange={handleOrderingChange}>
           {orderingOptions.map((option) => (
             <option key={option} value={option}>
               {option}
             </option>
           ))}
         </select>
-      </label>
+      </div>
     </div>
   );
 }
 
 export default FilterDropdown;
+ 

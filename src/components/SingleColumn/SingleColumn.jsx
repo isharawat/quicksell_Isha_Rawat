@@ -1,8 +1,8 @@
 // KanbanColumn.js
 import React from "react";
-import SingleCard from "./SingleCard";
-import "../styles/SingleColumn.css";
-import ColumnDetails from "./ColumnDetails";
+import SingleCard from "../SingleCard/SingleCard";
+import "./SingleColumn.css";
+import ColumnDetails from "../ColumnDetails/ColumnDetails";
 
 function SingleColumn({ title, tickets, userInfo, selectedGrouping }) {
   

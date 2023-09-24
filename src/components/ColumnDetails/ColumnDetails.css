@@ -1,0 +1,17 @@
+.column-details-outer-box{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    margin: 15px 0px;
+}
+.inner-left-box {
+    display: inline-block;
+}
+.inner-right-box {
+    display: inline-block;
+    text-align: end;
+}
+.columnDisplayText{
+    margin-left: 20px;
+    margin-right: 5px;
+    font-size: 12px;
+}

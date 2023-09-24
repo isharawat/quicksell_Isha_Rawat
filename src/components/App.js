@@ -1,9 +1,9 @@
 // App.js
 import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
-import FilterDropdown from './FilterDropdown';
-import OuterBoard from './OuterBoard';
-import '../styles/App.css';
+import FilterDropdown from './FilterDropdown/FilterDropdown';
+import OuterBoard from './OuterBoard/OuterBoard';
+import './App.css';
 import { Vector1, arrow_down } from '../assets';
 
 function App() {
@@ -80,10 +80,10 @@ function App() {
   console.log("dataafterrerender",data, selectedGrouping);
   return (
     <div className="App">
-      <div style={{display: "flex", width: "70px", justifyContent: "space-evenly"}}>
-        <img src = {Vector1}></img>
-        <div style={{fontSize: "12px"}}>Display</div>
-        <img src = {arrow_down} onClick = {handleClick} />
+      <div className="display-filter-button">
+        <img className = "display-filter-icon" src = {Vector1}/>
+        <div className = "display-filter-text">Display</div>
+        <img className = "display-filter-icon" src = {arrow_down} onClick = {handleClick} />
       </div>
       {toggle && <FilterDropdown
         selectedGrouping={selectedGrouping}

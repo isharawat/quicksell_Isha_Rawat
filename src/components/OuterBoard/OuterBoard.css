@@ -1,8 +1,9 @@
 .kanban-board{
+  margin-left: 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  background-color: #f4f5f8;
+  background-color: rgb(245, 243, 243);
 }
 .user-id {
   font-weight: bold;
