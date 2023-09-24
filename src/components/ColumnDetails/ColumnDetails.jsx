@@ -26,7 +26,7 @@ const ColumnDetails = ({title, tickets, userInfo, currentGrouping}) => {
   return (
     <div className = "column-details-outer-box">
         <div className = "inner-left-box">
-          <div style={{ display: "flex" }}>
+          <div style={{ display: "flex", alignItems: "center"}}>
             {(currentGrouping === "user") ? 
               <UserProfile userInfo={userInfo} currUserId={title} />:<img src={iconURL} alt = "" />
             }
