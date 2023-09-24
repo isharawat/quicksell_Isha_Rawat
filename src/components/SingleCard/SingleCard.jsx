@@ -1,5 +1,4 @@
 import "./SingleCard.css";
-import { fade_circle} from "../../assets/index";
 import UserProfile from "./UserProfile";
 import { useContext } from "react";
 import AppContext from "../../context";
