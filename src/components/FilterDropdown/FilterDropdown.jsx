@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import AppContext from '../../context';
 import './FilterDropdown.css'
 
+// Handling the dropdown, setting the preferred ordering and grouping.
 function FilterDropdown({currentGrouping, setCurrentGrouping, currentOrdering, setCurrentOrdering}) {
   const values = useContext(AppContext);
   const groupingOptions = values.groupingOptions;

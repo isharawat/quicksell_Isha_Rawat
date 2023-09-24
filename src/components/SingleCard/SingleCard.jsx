@@ -4,6 +4,7 @@ import UserProfile from "./UserProfile";
 import { useContext } from "react";
 import AppContext from "../../context";
 
+// Component for handling a single ticket.
 function SingleCard({ ticket, userInfo, currentGrouping }) {
   const values = useContext(AppContext);
   const statusIcon = values.statusIcon;

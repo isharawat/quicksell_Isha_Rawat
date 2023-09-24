@@ -4,6 +4,8 @@ import AppContext from '../../context';
 import UserProfile from "../SingleCard/UserProfile";
 import { plus, no_priority } from '../../assets';
 import './ColumnDetails.css';
+
+// Handling the top of each column.
 const ColumnDetails = ({title, tickets, userInfo, currentGrouping}) => {
   const values = useContext(AppContext);
   const statusIcon = values.statusIcon;

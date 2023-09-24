@@ -29,13 +29,14 @@ function App() {
     fetchApi();
   }, []);
 
-// Function to update the user after rerendering.
+// Function to update the userInfo after rerendering.
   function userMap() {
     users.forEach(user => {
       userInfo[user.id] = user;
     })
   }
 
+// Sorting the tickets on the basis of desired ordering.
   function ticketsSorting(requiredTickets) {
     Object.keys(requiredTickets).forEach(key => {
       requiredTickets[key] = requiredTickets[key].sort((a, b) => {
@@ -48,6 +49,7 @@ function App() {
     });
   }
 
+  // Sorting the tickets on the basis of desired grouping.
   function ticketsGrouping(){
     let requiredTickets = {};
     tickets.forEach(ticket => {
@@ -66,6 +68,8 @@ function App() {
     ticketsSorting(requiredTickets);
     return requiredTickets;
   }
+
+  // handling dropDown Menu.
   const handleClick= (e) => {
     if(toggle) {
       setToggle(false);
@@ -74,6 +78,8 @@ function App() {
       setToggle(true);
     }
   }
+
+  // updating the latest data after rerendering.
   const data = ticketsGrouping();
   userMap();
 
