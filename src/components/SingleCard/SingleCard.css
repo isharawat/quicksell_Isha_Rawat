@@ -9,10 +9,6 @@
   flex-direction: column;
 }
 
-.check-button {
-  text-align: start;
-}
-
 /* Top row: User ID and Circular User Profile */
 .top-row {
   display: flex;
@@ -24,27 +20,24 @@
   font-size: 12px;
 }
 
-/* Top left: User ID */
 .user-id {
   font-weight: bold;
 }
 
-/* Top right: Circular User Profile */
-.profile-image {
+.user-profile-image {
   width: 15px;
   height: 15px;
   border-radius: 8px;
-  position: relative;
-  
+  position: relative; 
 }
+
 .profile {
   width: 20px;
   height: 20px;
-  border-radius: 50%;
-  
+  border-radius: 50%; 
 }
 
-.online-dot {
+.available-dot {
   position: absolute; 
   width: 7px; 
   height: 7px;
@@ -55,7 +48,6 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
 }
 
-/* Title */
 .ticket-title {
   height: 30px;
   font-weight: bold;
@@ -66,7 +58,6 @@
   align-items: center;
 }
 
-/* Feature Request Button */
 .feature-request-button {
   font-size: 9px;
   color: rgb(58, 57, 57);
@@ -74,6 +65,7 @@
   padding: 3px;
   display: flex;
   align-items: center;
+  justify-items: center;
   justify-content: center;
   cursor: pointer;
   box-shadow: 0 0 5px rgba(121, 118, 118, 0.3);
@@ -90,11 +82,16 @@
   padding: 3px;
   box-shadow: 0 0 5px rgba(121, 118, 118, 0.3);
 }
-
-.inlineblock {
-  display: inline-block;
+.feature-request-icon {
+  display: flex;
+  justify-content: center;
+  background-color: #bec2c8;
+  width: 6px;
+  height: 6px;
+  border-radius: 7px;
+  margin-right: 6px;
 }
+
 .marginright{
   margin-right: 6px;
-
 }

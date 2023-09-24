@@ -14,11 +14,11 @@ export default function UserProfile({currUserId, userInfo}) {
       }
     }
     return (
-        <div className="profile-image">
+        <div className="user-profile-image">
           {userInfo[currUserId] && 
             <img className = "profile" src={`https://via.placeholder.com/50?text=${userInitials}`} alt={`${userInitials}`} />
           }
-          <div className="online-dot" style={{backgroundColor: `${color}`}}></div>
+          <div className="available-dot" style={{backgroundColor: `${color}`}}></div>
         </div>
     )
 }

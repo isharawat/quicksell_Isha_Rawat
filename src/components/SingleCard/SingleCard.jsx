@@ -35,8 +35,7 @@ function SingleCard({ ticket, userInfo, currentGrouping }) {
           )}
         </span>
         <div className = "feature-request-button feature">
-          <div className = "inlineblock">
-            <img className = "marginright" src={fade_circle} alt = "" />
+          <div className = "feature-request-icon">
           </div>
           <div className = "inlineblock">Feature Request</div>
         </div>

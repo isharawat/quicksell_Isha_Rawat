@@ -4,11 +4,3 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
-.user-id {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.check-button {
-  display: flex;
-  flex-direction: row;
-}
