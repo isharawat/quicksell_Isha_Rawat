@@ -9,7 +9,7 @@ import { Vector1, arrow_down } from '../assets';
 function App() {
   const [tickets, setTickets] = useState([]);
   const [users, setUsers] = useState([]);
-  const userInfo = {};
+  let userInfo = {};
   const [selectedGrouping, setSelectedGrouping] = useState("status");
   const [selectedOrdering, setSelectedOrdering] = useState('priority');
   
@@ -31,8 +31,7 @@ function App() {
       });
   }
   useEffect(() => {
-    fetchApi()
-    //userMap();
+    fetchApi();
   }, []);
   
   function groupedAndSortedTickets(){
@@ -91,10 +90,9 @@ function App() {
         setSelectedGrouping={setSelectedGrouping}
         selectedOrdering={selectedOrdering}
         setSelectedOrdering={setSelectedOrdering}
-        users={users}
+        
       />}
       <OuterBoard
-        users = {users}
         userInfo = {userInfo}
         data = {data}
         selectedGrouping = {selectedGrouping}

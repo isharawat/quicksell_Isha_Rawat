@@ -1,6 +1,5 @@
 /* Styles for the Kanban column component */
 .kanban_column {/* Adjust column width as needed */
-  margin: 5px;
   border-radius: 4px;
   padding: 10px;
   display: flex;
@@ -12,8 +11,3 @@ h2 {
   margin: 10px 0;
 }
 
-.user-profile {
-  margin-bottom: 10px;
-}
-
-/* Add more styles as needed */
