@@ -27,16 +27,16 @@ const ColumnDetails = ({title, tickets, userInfo, currentGrouping}) => {
     <div className = "column-details-outer-box">
         <div className = "inner-left-box">
           <div style={{ display: "flex" }}>
-            {(currentGrouping == "user") ? 
-              <UserProfile userInfo={userInfo} currUserId={title} />:<img src={iconURL} />
+            {(currentGrouping === "user") ? 
+              <UserProfile userInfo={userInfo} currUserId={title} />:<img src={iconURL} alt = "" />
             }
             <span className='columnDisplayText'> {columnDisplayText} </span>
             <span style={{ fontSize: "12px" }}>{tickets.length}</span>
           </div>
         </div>
         <div className = 'inner-right-box'>
-          <img src={plus} style={{marginRight: "10px"}}/>
-          <img src={no_priority} />
+          <img src={plus}  alt = "" style={{marginRight: "10px"}}/>
+          <img src={no_priority} alt = ""/>
         </div>
       </div>
   )

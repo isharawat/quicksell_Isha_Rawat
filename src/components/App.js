@@ -1,5 +1,5 @@
 // App.js
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import FilterDropdown from './FilterDropdown/FilterDropdown';
 import OuterBoard from './OuterBoard/OuterBoard';
@@ -80,9 +80,9 @@ function App() {
   return (
     <div className="App">
       <div className="display-filter-button" onClick = {handleClick} >
-        <img className = "display-filter-icon" src = {Vector1}/>
+        <img className = "display-filter-icon" src = {Vector1} alt = ""/>
         <div className = "display-filter-text">Display</div>
-        <img className = "display-filter-icon" src = {arrow_down}/>
+        <img className = "display-filter-icon" src = {arrow_down} alt = ""/>
       </div>
       {toggle && <FilterDropdown
         currentGrouping={currentGrouping}

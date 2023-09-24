@@ -21,7 +21,7 @@ function SingleCard({ ticket, userInfo, currentGrouping }) {
         <div>
           {currentGrouping !== "status" && (
             <img className = "inlineblock marginright"
-              src={statusIcon[ticket.status]}
+              src={statusIcon[ticket.status]} alt = ""
             />
           )}
         </div>
@@ -31,12 +31,12 @@ function SingleCard({ ticket, userInfo, currentGrouping }) {
       <div style={{ display: "flex" }}>
         <span>
           {currentGrouping !== "priority" && (
-            <img className = "feature-request-left-icon" src={priorityIcon[ticket.priority]} />
+            <img className = "feature-request-left-icon" src={priorityIcon[ticket.priority]} alt = ""/>
           )}
         </span>
         <div className = "feature-request-button feature">
           <div className = "inlineblock">
-            <img className = "marginright" src={fade_circle} />
+            <img className = "marginright" src={fade_circle} alt = "" />
           </div>
           <div className = "inlineblock">Feature Request</div>
         </div>
