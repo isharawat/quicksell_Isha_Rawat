@@ -1,8 +1,10 @@
 .filter-dropdown {
+  position: absolute;
   margin-left: 30px;
   border-radius: 4px;
   width: 170px;
   padding: 5px;
+  background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 .filter-display-text {

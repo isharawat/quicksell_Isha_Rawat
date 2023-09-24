@@ -3,9 +3,9 @@ body {
   margin: 0;    
   background-color: rgb(245, 243, 243);
 }
-  .filter-dropdown {
-    margin-bottom: 20px;
-  }
+.filter-dropdown {
+  margin-bottom: 20px;
+}
 
 .display-filter-button {
   margin: 10px 20px 10px 30px;
@@ -16,6 +16,7 @@ body {
   grid-template-columns: 1fr 4fr 1fr;
   align-items: center;
   justify-items: center;
+  cursor: pointer;
   padding: 5px;
   color: rgb(58, 57, 57);
   box-shadow: 0 0 5px rgba(104, 102, 102, 0.3);

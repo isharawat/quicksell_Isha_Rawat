@@ -1,20 +1,20 @@
 import React from 'react'
 import { useContext } from 'react';
 import AppContext from '../../context';
-import UserProfile from "../UserProfile";
+import UserProfile from "../SingleCard/UserProfile";
 import { plus, no_priority } from '../../assets';
 import './ColumnDetails.css';
-const ColumnDetails = ({title, tickets, userInfo, selectedGrouping}) => {
+const ColumnDetails = ({title, tickets, userInfo, currentGrouping}) => {
   const values = useContext(AppContext);
   const statusIcon = values.statusIcon;
   const priorityIcon = values.priorityIcon;
   const priorityType = values.priorityType;
-
   let iconURL, columnDisplayText;
-  if(selectedGrouping === "user") {
+
+  if(currentGrouping === "user") {
     columnDisplayText = userInfo[title].name;
   }
-  else if(selectedGrouping === "priority") {
+  else if(currentGrouping === "priority") {
     iconURL = priorityIcon[title];
     columnDisplayText = priorityType[title];
   }
@@ -22,12 +22,13 @@ const ColumnDetails = ({title, tickets, userInfo, selectedGrouping}) => {
     iconURL = statusIcon[title];
     columnDisplayText = title;
   }
+
   return (
     <div className = "column-details-outer-box">
         <div className = "inner-left-box">
           <div style={{ display: "flex" }}>
-            {(selectedGrouping == "user") ? 
-              <UserProfile userInfo={userInfo} userId={title} />:<img src={iconURL} />
+            {(currentGrouping == "user") ? 
+              <UserProfile userInfo={userInfo} currUserId={title} />:<img src={iconURL} />
             }
             <span className='columnDisplayText'> {columnDisplayText} </span>
             <span style={{ fontSize: "12px" }}>{tickets.length}</span>
